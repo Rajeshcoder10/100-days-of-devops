@@ -86,3 +86,5 @@ This is useful for background services and automated processes that don’t requ
 - ***Useradd command***
 - ***User Management***
 - ***Non-interactive Shell***
+
+**Next Task**: [Day_2 - Temporary User Setup](../Day_2/day_2.md)
