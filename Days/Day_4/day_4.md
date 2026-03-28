@@ -125,3 +125,7 @@ I also found it interesting how a **simple numeric command (**`chmod 755`**) can
 
 - ***Linux File Permissions (chmod, ls -l)***
 - ***Script Execution and User Access Control***
+
+**Previous Task**: [Day 3: Secure Root SSH Access](../Day_3/day_3.md)
+
+**Next Task**: [Day 5: SElinux Installation and Configuration](../Day_5/day_5.md)
