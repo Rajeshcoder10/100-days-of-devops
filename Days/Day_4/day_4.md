@@ -1,0 +1,1 @@
+# Day 4: Script Execution Permissions | 100 Days of DevOps
