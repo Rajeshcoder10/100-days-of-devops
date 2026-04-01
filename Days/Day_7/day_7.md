@@ -49,7 +49,7 @@ This created:
 
 ---
 
-### **3. Copied public key to App Server**
+### **2. Copied public key to App Server**
 
 ```plaintext
 ssh-copy-id tony@app-server-1
@@ -68,7 +68,7 @@ ssh-copy-id tony@app-server-1
 
 ---
 
-### **4. Tested password-less SSH login**
+### **3. Tested password-less SSH login**
 
 ```plaintext
 ssh tony@app-server-1
@@ -81,7 +81,7 @@ Login was successful without asking for a password.
 
 ---
 
-### **5. Repeated for all app servers**
+### **4. Repeated for all app servers**
 
 Performed the same steps for other servers using their respective sudo users.
 
