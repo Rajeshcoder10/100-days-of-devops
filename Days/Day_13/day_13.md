@@ -157,6 +157,7 @@ sudo iptables -L -n -v
 <div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
   <img src="./images/13_configuration.png" alt="Image">
 </div>
+
 <div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
   <img src="./images/14_iptables.png" alt="Image">
 </div>
@@ -199,15 +200,19 @@ Applied the same configuration across all application servers .
 <div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
   <img src="./images/17_ssh2.png" alt="Image">
 </div>
+
 <div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
   <img src="./images/18_ssh3.png" alt="Image">
 </div>
+
 <div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
   <img src="./images/19_final_checks_lbr.png" alt="Image">
 </div>
+
 <div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
   <img src="./images/20_final_checks_host.png" alt="Image">
 </div>
+
 * * *
 
 ### **My Understanding**
