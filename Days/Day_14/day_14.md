@@ -154,7 +154,8 @@ sudo systemctl enable httpd
 
 * * *
 
-### **9\. Verified Apache is Running **
+
+### 9\. Verified Apache is Running 
 
 ```bash
 sudo systemctl status httpd
