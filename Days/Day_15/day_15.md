@@ -1,5 +1,9 @@
 # Day 15: Setup SSL for Nginx
 
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/1_task.png" alt="Image">
+</div>
+
 ## Content:
 
 > Today I worked on configuring a secure web server using Nginx with SSL. The task involved installing Nginx, setting up a self-signed SSL certificate, configuring HTTPS, and verifying the setup from a remote jump host.
@@ -20,6 +24,10 @@ Through this task, I understood:
     
 
 * * *
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/2_task details.png" alt="Image">
+</div>
+
 
 ## Steps I Followed
 
@@ -30,6 +38,9 @@ Through this task, I understood:
 ```bash
 ssh tony@stapp01
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/3_sssh.png" alt="Image">
+</div>
 
 👉 First, I logged into the target server where the application needed to be deployed.
 
@@ -40,6 +51,9 @@ ssh tony@stapp01
 ```bash
 cat /etc/os-release
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/4_check_os.png" alt="Image">
+</div>
 
 👉 Confirmed the server is running **CentOS Stream 9**.
 
@@ -52,6 +66,9 @@ cat /etc/os-release
 ```bash
 sudo dnf install -y nginx
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/5_install_nginx.png" alt="Image">
+</div>
 
 👉 Installed the Nginx web server.
 
@@ -65,6 +82,9 @@ sudo dnf install -y nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/6_start_enable.png" alt="Image">
+</div>
 
 👉 Started the service and ensured it runs automatically on system boot.
 
@@ -82,6 +102,9 @@ sudo systemctl enable nginx
 ```bash
 sudo systemctl status nginx
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/7_status.png" alt="Image">
+</div>
 
 👉 Confirmed Nginx is running successfully.
 
@@ -94,6 +117,9 @@ sudo systemctl status nginx
 ```bash
 ls -l /tmp/nautilus.*
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/8_ls_c_k.png" alt="Image">
+</div>
 
 👉 Checked if the provided certificate and key files exist.
 
@@ -111,6 +137,7 @@ ls -l /tmp/nautilus.*
 ```bash
 sudo mkdir -p /etc/nginx/ssl
 ```
+
 
 👉 Created a dedicated directory for storing SSL files.
 
@@ -131,6 +158,9 @@ sudo mkdir -p /etc/nginx/ssl
 sudo mv /tmp/nautilus.crt /etc/nginx/ssl/
 sudo mv /tmp/nautilus.key /etc/nginx/ssl/
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/9_mv.png" alt="Image">
+</div>
 
 👉 Relocated SSL files to the proper directory.
 
@@ -142,6 +172,12 @@ sudo mv /tmp/nautilus.key /etc/nginx/ssl/
 sudo chmod 600 /etc/nginx/ssl/nautilus.key
 sudo chmod 644 /etc/nginx/ssl/nautilus.crt
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/10_permission_b_c.png" alt="Image">
+</div>
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/11_proper_permissions.png" alt="Image">
+</div>
 
 👉 Secured the files.
 
@@ -163,6 +199,9 @@ Created a new config file:
 ```bash
 sudo vi /etc/nginx/conf.d/ssl.conf
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/12_ssl_conf.png" alt="Image">
+</div>
 
 Added:
 
@@ -182,6 +221,9 @@ server {
     }
 }
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/13_ssl_conf_code.png" alt="Image">
+</div>
 
 * * *
 
@@ -211,6 +253,9 @@ include /etc/nginx/conf.d/*.conf;
 ```bash
 sudo nginx -t
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/14_test.png" alt="Image">
+</div>
 
 👉 Validated syntax before applying changes.
 
@@ -223,6 +268,9 @@ sudo nginx -t
 ```bash
 sudo systemctl restart nginx
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/15_restart.png" alt="Image">
+</div>
 
 👉 Applied the new SSL configuration.
 
@@ -233,6 +281,9 @@ sudo systemctl restart nginx
 ```bash
 echo "Welcome!" | sudo tee /usr/share/nginx/html/index.html
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/16_index_html.png" alt="Image">
+</div>
 
 👉 Created the required index page.
 
@@ -248,6 +299,9 @@ echo "Welcome!" | sudo tee /usr/share/nginx/html/index.html
 ```bash
 cat /usr/share/nginx/html/index.html
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/17_cat_check.png" alt="Image">
+</div>
 
 👉 Confirmed correct content is served.
 
@@ -266,6 +320,9 @@ Ran:
 ```bash
 curl -Ik https://stapp01/
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/18_curl.png" alt="Image">
+</div>
 
 * * *
 
@@ -327,3 +384,14 @@ This was a complete hands-on experience of setting up HTTPS using Nginx. It refl
 
 * * *
 
+
+### Topics Covered
+
+- ***install and manage Nginx***
+- ***Nginx configuration***
+- ***ssl***
+
+
+**Previous Task**: [ Day 14: Linux Process Troubleshooting](../Day_14/day_14.md)
+
+**Next Task**: [Day 16:  Install and Configure NGINX as Load Balancer](../Day_16/day_16.md)
