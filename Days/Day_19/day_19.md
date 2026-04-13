@@ -124,8 +124,8 @@ sudo systemctl status httpd
 ### **5\. Copied Website Files from Jump Host**
 
 ```bash
-scp -r thor@jump_host:/home/thor/beta /tmp/
-scp -r thor@jump_host:/home/thor/apps /tmp/
+scp -r thor@jump-host:/home/thor/beta /tmp/
+scp -r thor@jump-host:/home/thor/apps /tmp/
 ```
 <div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
   <img src="./images/10_scp_beta.png" alt="Image">
