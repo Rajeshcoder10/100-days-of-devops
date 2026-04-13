@@ -1,7 +1,7 @@
 # Day 19: Install and Configure Web Application
 
 <div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
-  <img src="./images/\/1_task.png" alt="Image">
+  <img src="./images/1_task.png" alt="Image">
 </div>
 
 ## **Content:**
@@ -23,6 +23,10 @@
 
 * * *
 
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/2_task_details.png" alt="Image">
+</div>
+
 ## **Steps I Followed :**
 
 ### **1\. Connected to Application Server**
@@ -30,6 +34,9 @@
 ```bash
 ssh steve@stapp02
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/3_ssh.png" alt="Image">
+</div>
 
 This command is used to securely connect to the remote application server where Apache will be installed.
 
@@ -40,6 +47,9 @@ This command is used to securely connect to the remote application server where 
 ```bash
 sudo dnf install httpd
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/4_install_httpd.png" alt="Image">
+</div>
 
 This installs the Apache HTTP server along with all required dependencies.
 
@@ -51,11 +61,17 @@ This installs the Apache HTTP server along with all required dependencies.
 sudo systemctl start httpd
 sudo systemctl enable httpd
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/5_start_enable.png" alt="Image">
+</div>
 
 *   `start` → starts the Apache service immediately
     
 *   `enable` → ensures Apache starts automatically on reboot
     
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/6_status.png" alt="Image">
+</div>
 
 * * *
 
@@ -66,6 +82,9 @@ Edited the Apache configuration file:
 ```bash
 sudo vi /etc/httpd/conf/httpd.conf
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/7_conf.png" alt="Image">
+</div>
 
 Changed:
 
@@ -78,6 +97,9 @@ to:
 ```apache
 Listen 3003
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/8_listen.png" alt="Image">
+</div>
 
 This allows Apache to serve content on port **3003** instead of the default port 80.
 
@@ -86,10 +108,16 @@ Now restart and observe the lsitening port
 ```bash
 sudo systemctl restart httpd
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/8_restart.png" alt="Image">
+</div>
 
 ```bash
 sudo systemctl status httpd
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/9_status.png" alt="Image">
+</div>
 
 * * *
 
@@ -99,6 +127,13 @@ sudo systemctl status httpd
 scp -r thor@jump_host:/home/thor/beta /tmp/
 scp -r thor@jump_host:/home/thor/apps /tmp/
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/10_scp_beta.png" alt="Image">
+</div>
+
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/11_scp_apps.png" alt="Image">
+</div>
 
 This copies the website backups from the jump host to the application server.
 
@@ -110,6 +145,9 @@ This copies the website backups from the jump host to the application server.
 sudo mv /tmp/beta /var/www/html/
 sudo mv /tmp/apps /var/www/html/
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/12_mv.png" alt="Image">
+</div>
 
 Apache serves content from `/var/www/html`, so both websites were placed here.
 
@@ -121,6 +159,9 @@ Apache serves content from `/var/www/html`, so both websites were placed here.
 sudo chown -R apache:apache /var/www/html/beta
 sudo chown -R apache:apache /var/www/html/apps
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/13_chown.png" alt="Image">
+</div>
 
 This ensures Apache has proper access to serve the files.
 
@@ -133,6 +174,9 @@ Edited Apache config again:
 ```bash
 sudo vi /etc/httpd/conf/httpd.conf
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/14_conf.png" alt="Image">
+</div>
 
 Added inside `<IfModule alias_module>`:
 
@@ -140,6 +184,9 @@ Added inside `<IfModule alias_module>`:
 Alias /beta /var/www/html/beta
 Alias /apps /var/www/html/apps
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/15_alias.png" alt="Image">
+</div>
 
 Added directory permissions:
 
@@ -152,6 +199,9 @@ Added directory permissions:
     Require all granted
 </Directory>
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/16_directory.png" alt="Image">
+</div>
 
 This maps:
 
@@ -167,6 +217,9 @@ This maps:
 ```bash
 sudo systemctl restart httpd
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/17_restart.png" alt="Image">
+</div>
 
 This applies all configuration changes.
 
@@ -178,6 +231,13 @@ This applies all configuration changes.
 curl http://localhost:3003/beta/
 curl http://localhost:3003/apps/
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/18_curl_beta.png" alt="Image">
+</div>
+
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/19_curl_apps.png" alt="Image">
+</div>
 
 Both commands returned HTML content, confirming the websites are accessible.
 
