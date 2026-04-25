@@ -1,4 +1,4 @@
-# Day 30: Git Hard Reset | 100 Days of DevOps
+# Day 30: Git Hard Reset 
 
 <div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
   <img src="./images/1_task.png" alt="Image">
