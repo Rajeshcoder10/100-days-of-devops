@@ -132,6 +132,6 @@ I found it interesting how quickly a fully functional web server like Nginx can 
 - ***docker run***
 
 
-**Previous Task**: [Day 35: Install Docker Packages and Start Docker Service ](../Day_34/day_34.md)
+**Previous Task**: [Day 35: Install Docker Packages and Start Docker Service ](../Day_35/day_35.md)
 
-**Next Task**: [Day 37: Copy File to Docker Container ](../Day_36/day_36.md)
+**Next Task**: [Day 37: Copy File to Docker Container ](../Day_37/day_37.md)
