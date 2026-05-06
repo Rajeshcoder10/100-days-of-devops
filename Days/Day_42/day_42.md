@@ -156,8 +156,8 @@ This makes macvlan useful for real-world network simulations and advanced deploy
 ### Topics Covered
 
 - ***docker-Network***
-- ***docker ***
-- *** Macvlan ***
+- ***docker***
+- ***Macvlan***
 
 
 
