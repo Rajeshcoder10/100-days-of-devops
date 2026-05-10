@@ -382,8 +382,6 @@ This task also improved my troubleshooting skills because I had to:
 
 * * *
 
-
-
 ### Topics Covered
 
 - ***docker-issues***
