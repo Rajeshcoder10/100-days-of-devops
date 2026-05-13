@@ -1,0 +1,1 @@
+# Day 50: Set Resource Limits in Kubernetes Pods
