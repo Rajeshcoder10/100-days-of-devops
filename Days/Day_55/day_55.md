@@ -29,6 +29,10 @@
 
 ## 🔹 Task Requirement
 
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/2_task_details.png" alt="Image">
+</div>
+
 As per the Nautilus DevOps team requirements, I needed to:
 
 Create a Pod with the following details:
@@ -86,6 +90,9 @@ Executed:
 ```bash
 vi webserver.yml
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/3_vi.png" alt="Image">
+</div>
 
 Added the following configuration:
 
@@ -125,6 +132,10 @@ spec:
 
 ## 🔹 Simple Explanation of the YAML Configuration
 
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/4_yml.png" alt="Image">
+</div>
+
 | Section | Explanation |
 | --- | --- |
 | `apiVersion: v1` | Uses Kubernetes core API |
@@ -147,6 +158,9 @@ Executed:
 ```bash
 kubectl apply -f webserver.yml
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/5_apply.png" alt="Image">
+</div>
 
 Observed:
 
@@ -165,6 +179,9 @@ Executed:
 ```bash
 kubectl get pods
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/6_get_pods.png" alt="Image">
+</div>
 
 Observed:
 
@@ -178,6 +195,15 @@ Verified Pod details:
 ```bash
 kubectl describe pod webserver
 ```
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/7_describe.png" alt="Image">
+</div>
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/8_describe.png" alt="Image">
+</div>
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/9_describe.png" alt="Image">
+</div>
 
 Observed:
 
@@ -214,6 +240,10 @@ Add this section after **"Verified the Pod Configuration"**.
 
 To confirm that nginx was generating logs and the sidecar container could access them through the shared volume, I tested the setup from inside the nginx container.
 
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/10_exec.png" alt="Image">
+</div>
+
 Executed:
 
 ```bash
@@ -238,6 +268,10 @@ This confirmed that nginx log files were present inside the mounted shared volum
 Next, I generated HTTP requests to create log entries.
 
 Executed:
+
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/11_curl.png" alt="Image">
+</div>
 
 ```bash
 curl localhost
@@ -265,15 +299,26 @@ Observed:
 
 This generated a **404 error request**, helping verify both access and error logging.
 
+
 ---
 
 ### Verified Sidecar Log Shipping
 
 To confirm that the sidecar container was reading logs from the shared volume, executed:
 
+
 ```bash
 kubectl logs webserver -c sidecar-container
 ```
+
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/12_log.png" alt="Image">
+</div>
+
+<div style="border:1px solid #ccc; padding:10px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); display:inline-block;">
+  <img src="./images/13_logs.png" alt="Image">
+</div>
+
 
 Observed:
 
