@@ -276,7 +276,6 @@ metadata:
 type: Opaque
 stringData:
   database: kodekloud_db9
-
 ```
 
 Applied:
