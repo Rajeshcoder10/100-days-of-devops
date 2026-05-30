@@ -252,24 +252,18 @@ Added:
 ```yaml
 apiVersion: v1
 kind: Secret
-
 metadata:
   name: mysql-root-pass
-
 type: Opaque
-
 stringData:
   password: YUIidhb667
 
 ---
 apiVersion: v1
 kind: Secret
-
 metadata:
   name: mysql-user-pass
-
 type: Opaque
-
 stringData:
   username: kodekloud_top
   password: Rc5C9EyvbU
@@ -277,14 +271,12 @@ stringData:
 ---
 apiVersion: v1
 kind: Secret
-
 metadata:
   name: mysql-db-url
-
 type: Opaque
-
 stringData:
   database: kodekloud_db9
+
 ```
 
 Applied:
