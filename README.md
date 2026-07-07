@@ -46,9 +46,9 @@ The goal of this repository is not only to complete the challenge, but also to b
 # 📊 Progress
 
 ```
-████████████████████████░ 96%
+████████████████████████░ 97%
 
-✅ 96 / 100 Days Completed
+✅ 97 / 100 Days Completed
 ```
 
 ---
