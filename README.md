@@ -10,17 +10,34 @@ Documenting my complete DevOps learning journey through hands-on labs, detailed 
 
 <p align="center">
 
-![Progress](https://img.shields.io/badge/Completed-99%2F100-success?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In%20Progress-blue?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Completed-100%2F100-success?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Rajeshcoder10/100-days-of-devops?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/Rajeshcoder10/100-days-of-devops?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/Rajeshcoder10/100-days-of-devops?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
+![Challenge](https://img.shields.io/badge/KodeKloud-100%20Days%20Completed-success?style=for-the-badge)
+![Certificate](https://img.shields.io/badge/Certificate-Earned-gold?style=for-the-badge&logo=google-scholar)
 </p>
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=linux,git,docker,kubernetes,jenkins,ansible,terraform,aws,bash,github,vim,nginx,mysql,postgres" />
+</p>
+
+---
+
+## 🏆 Challenge Completion Certificate
+
+<p align="center">
+  <a href="resources/certificates/2210a5e4-156f-4f5f-9160-db6eb908dfc5.pdf">
+    <img src="resources/certificates/2210a5e4-156f-4f5f-9160-db6eb908dfc5.jpg"
+         alt="KodeKloud 100 Days of DevOps Certificate"
+         width="850">
+  </a>
+</p>
+
+<p align="center">
+  <b>🎉 Successfully completed the KodeKloud 100 Days of DevOps Challenge.</b><br>
+  Click the certificate above to view the full PDF.
 </p>
 
 ---
@@ -46,9 +63,9 @@ The goal of this repository is not only to complete the challenge, but also to b
 # 📊 Progress
 
 ```
-████████████████████████░ 99%
+████████████████████████░ 100%
 
-✅ 99 / 100 Days Completed
+✅ 100 / 100 Days Completed
 ```
 
 ---
@@ -63,7 +80,7 @@ The goal of this repository is not only to complete the challenge, but also to b
 | ☸ Kubernetes | 48–67 | ✅ |
 | ⚙ Jenkins | 68–81 | ✅ |
 | 🤖 Ansible | 82–93 | ✅ |
-| 🌍 Terraform | 94–100 | 🚧 |
+| 🌍 Terraform | 94–100 | ✅ |
 
 ---
 

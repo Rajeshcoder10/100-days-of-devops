@@ -840,8 +840,6 @@ I found it interesting that Terraform automatically handles dependencies between
 
 * * *
 
-* * *
-
 ### Topics Covered
 
 - ***Terraform***
