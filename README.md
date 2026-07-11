@@ -10,7 +10,7 @@ Documenting my complete DevOps learning journey through hands-on labs, detailed 
 
 <p align="center">
 
-![Progress](https://img.shields.io/badge/Completed-97%2F100-success?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Completed-99%2F100-success?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-blue?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Rajeshcoder10/100-days-of-devops?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/Rajeshcoder10/100-days-of-devops?style=for-the-badge)
@@ -46,9 +46,9 @@ The goal of this repository is not only to complete the challenge, but also to b
 # 📊 Progress
 
 ```
-████████████████████████░ 97%
+████████████████████████░ 99%
 
-✅ 97 / 100 Days Completed
+✅ 99 / 100 Days Completed
 ```
 
 ---
